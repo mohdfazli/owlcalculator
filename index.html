@@ -23,6 +23,8 @@
   <video style="display:none;" autoplay></video>
   <canvas style="height:100px;"></canvas>
 
+  <p class="change" onclick="sycack()">viewca</p>
+  <br><br>
   <p class="change" onclick="sycack()">oo</p>
   <br><br>
   <p class="change" onclick="sycack()">^^</p>
@@ -45,6 +47,16 @@
   <!-- <img src="file:///C:/Users/fazli/Desktop/bkp%20org%20chart.jpg"> -->
 
 <script>
+
+let camerashow = "none"
+function showhidecamera(){
+  if(camerashow == "none"){
+    camerashow = "block"
+  }
+  else{
+    camerashow = "none"
+  }
+}
 
 function sycack() {
   a = document.getElementById("mylist").getElementsByTagName("a");
