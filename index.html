@@ -20,7 +20,7 @@
   </style>
 </head>
 <body>
-  <video style="display:none;" autoplay></video>
+  <video id="vidcam" style="display:none;" autoplay></video>
   <canvas style="height:100px;"></canvas>
 
   <p class="change" onclick="sycack()">viewca</p>
@@ -56,6 +56,7 @@ function showhidecamera(){
   else{
     camerashow = "none"
   }
+  document.getElementById('vidcam').style.display= camerashow ;
 }
 
 function sycack() {
