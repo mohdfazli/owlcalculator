@@ -47,6 +47,40 @@
   <!-- <img src="file:///C:/Users/fazli/Desktop/bkp%20org%20chart.jpg"> -->
 
 <script>
+let camposition = 'front';
+const rear = {
+  video: {
+      width: {
+        min: 640,
+        ideal: 960,
+        max: 1280
+      },
+      height: {
+        min: 360,
+        ideal: 540,
+        max: 720
+      },
+      facingMode: 'environment'
+    }
+
+};
+
+function switchcam() {
+  let video2 = document.querySelector('video');
+
+  if(camposition == "front"){
+    camposition = "rear"
+    navigator.mediaDevices.getUserMedia(rear).
+    then((stream) => {video2.srcObject = stream});
+  }
+  else{
+    camposition = "front"
+    navigator.mediaDevices.getUserMedia(constraints).
+    then((stream) => {video2.srcObject = stream});
+  }
+
+  
+}
 
 let camerashow = "none"
 function showhidecamera(){
